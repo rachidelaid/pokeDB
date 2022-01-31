@@ -26,7 +26,6 @@ body {
   background-color: var(--bg-dark);
   font-family: var(--normal-font);
   color: var(--text-color);
-  padding: 0 2rem;
 }
 
 .flex {
@@ -42,7 +41,7 @@ body {
 }
 
 header {
-  padding: 1rem 0;
+  padding: 1rem 2rem;
 }
 
 .logo img {
@@ -68,4 +67,17 @@ header {
   background-color: var(--bg-light);
   border: none;
   border-radius: 0.7rem;
+}
+
+footer {
+  background-color: var(--bg-light);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1rem 2rem;
+}
+
+.profiles {
+  color: var(--accent-color);
 }
