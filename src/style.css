@@ -9,6 +9,25 @@
   --text-color: #fff;
   --normal-font: 'Roboto Condensed', sans-serif;
   --header-font: 'Poppins', sans-serif;
+  --chip-normal: #a8a878;
+  --chip-fighting: #c03028;
+  --chip-flying: #a890f0;
+  --chip-poison: #a040a0;
+  --chip-ground: #dfbf68;
+  --chip-rock: #b8a038;
+  --chip-bug: #a8b820;
+  --chip-ghost: #715995;
+  --chip-steel: #b8b8d0;
+  --chip-fire: #e17e38;
+  --chip-water: #6890f0;
+  --chip-grass: #78c850;
+  --chip-electric: #eec835;
+  --chip-psychic: #f85888;
+  --chip-ice: #98d8d8;
+  --chip-dragon: #7038f8;
+  --chip-dark: #705848;
+  --chip-fairy: #f0b6bc;
+  --chip-shadow: #0c0e0f;
 }
 
 *,
@@ -20,6 +39,36 @@
   text-decoration: none;
   list-style: none;
   color: inherit;
+}
+
+svg {
+  width: 1.5rem;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  }
+
+  20% {
+    transform: translate(-10px, 0) rotate(-20deg);
+  }
+
+  30% {
+    transform: translate(10px, 0) rotate(20deg);
+  }
+
+  50% {
+    transform: translate(-10px, 0) rotate(-10deg);
+  }
+
+  60% {
+    transform: translate(10px, 0) rotate(10deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0);
+  }
 }
 
 body {
@@ -36,6 +85,10 @@ body {
   justify-content: space-between;
 }
 
+.flex-jcc {
+  justify-content: center;
+}
+
 .flex-aic {
   align-items: center;
 }
@@ -45,7 +98,7 @@ header {
 }
 
 .logo img {
-  width: 50px;
+  width: 3.1rem;
 }
 
 .logo p {
@@ -69,15 +122,182 @@ header {
   border-radius: 0.7rem;
 }
 
-footer {
-  background-color: var(--bg-light);
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
+main {
   padding: 1rem 2rem;
 }
 
-.profiles {
+.intro {
+  text-align: center;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.loading {
+  height: calc(100vh - 16.45rem);
+}
+
+.loading-ball {
+  width: 7rem;
+  animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
+}
+
+.card {
+  flex-direction: column;
+  padding: 1rem;
+  background-color: var(--bg-light);
+  border-radius: 0.7rem;
+}
+
+.info {
+  gap: 1rem;
+  width: 100%;
+}
+
+.title {
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.avatar {
+  width: 130px;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.chips-wrap {
+  gap: 0.5rem;
+}
+
+.chips {
+  display: block;
+  border-radius: 0.3rem;
+  padding: 0.3rem;
+  font-size: 0.9rem;
+  font-weight: 200;
+  background-color: var(--bg-dark);
+  width: fit-content;
+}
+
+.chip-normal {
+  background-color: var(--chip-normal);
+}
+
+.chip-fighting {
+  background-color: var(--chip-fighting);
+}
+
+.chip-flying {
+  background-color: var(--chip-flying);
+}
+
+.chip-poison {
+  background-color: var(--chip-poison);
+}
+
+.chip-ground {
+  background-color: var(--chip-ground);
+}
+
+.chip-rock {
+  background-color: var(--chip-rock);
+}
+
+.chip-bug {
+  background-color: var(--chip-bug);
+}
+
+.chip-ghost {
+  background-color: var(--chip-ghost);
+}
+
+.chip-steel {
+  background-color: var(--chip-steel);
+}
+
+.chip-fire {
+  background-color: var(--chip-fire);
+}
+
+.chip-water {
+  background-color: var(--chip-water);
+}
+
+.chip-grass {
+  background-color: var(--chip-grass);
+}
+
+.chip-electric {
+  background-color: var(--chip-electric);
+}
+
+.chip-psychic {
+  background-color: var(--chip-psychic);
+}
+
+.chip-ice {
+  background-color: var(--chip-ice);
+}
+
+.chip-dragon {
+  background-color: var(--chip-dragon);
+}
+
+.chip-dark {
+  background-color: var(--chip-dark);
+}
+
+.chip-fairy {
+  background-color: var(--chip-fairy);
+}
+
+.chip-shadow {
+  background-color: var(--chip-shadow);
+}
+
+.actions {
+  gap: 0.2rem;
+  flex-direction: column;
+}
+
+.pagination {
+  gap: 0.5rem;
+}
+
+.page {
+  padding: 0.5rem;
+  background-color: var(--bg-light);
+  border-radius: 0.5rem;
+  min-width: 2rem;
+  cursor: pointer;
+}
+
+.page.active {
   color: var(--accent-color);
+  font-weight: bold;
+}
+
+.next,
+.prev {
+  min-width: 4rem;
+}
+
+footer {
+  background-color: var(--bg-light);
+  padding: 1rem 2rem;
+}
+
+.tag {
+  color: var(--accent-color);
+}
+
+.hide {
+  display: none;
 }
