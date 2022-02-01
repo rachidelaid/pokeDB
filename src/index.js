@@ -1,7 +1,7 @@
 import './style.css';
 
 import { getPokeList } from './modules/poke.js';
-import showCards from './modules/showCards.js';
+import { showCards } from './modules/showCards.js';
 import setupPagination from './modules/pagination.js';
 
 const startup = async () => {
