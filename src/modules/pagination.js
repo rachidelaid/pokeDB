@@ -54,6 +54,15 @@ const setupPagination = () => {
 
     window.location = `/?page=${currentPage ? +currentPage + 1 : 2}`;
   });
+
+  document.querySelector('.prev').addEventListener('click', () => {
+    if (+currentPage >= 56) {
+      return;
+    }
+
+    if (currentPage === undefined || +currentPage === 1) return;
+    window.location = `/?page=${currentPage - 1}`;
+  });
 };
 
 export default setupPagination;

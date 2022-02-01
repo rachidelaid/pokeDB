@@ -168,7 +168,7 @@ main {
   transition: all 0.3s ease-in-out;
 }
 
-.card:hover img {
+.card:hover .avatar {
   transform: scale(1.1);
 }
 
@@ -300,4 +300,93 @@ footer {
 
 .hide {
   display: none;
+}
+
+.wrapper {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal {
+  position: relative;
+  background-color: var(--bg-light);
+  margin: 5% auto;
+  padding: 4rem;
+  width: fit-content;
+  flex-direction: column;
+  border-radius: 0.7rem;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: var(--red-color);
+}
+
+.image-wrap {
+  flex-direction: column;
+}
+
+.modal img {
+  width: 50%;
+}
+
+.pokemon-name {
+  margin-bottom: 1rem;
+}
+
+.stats {
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stats svg {
+  margin-right: 1rem;
+  width: 2rem;
+  color: var(--accent-color);
+}
+
+form {
+  margin-top: 3rem;
+  gap: 0.7rem;
+}
+
+#fullname,
+#comment,
+.submit-btn {
+  background-color: var(--bg-dark);
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.7rem;
+  resize: none;
+}
+
+#fullname::placeholder,
+#comment::placeholder {
+  color: #fff;
+  font-family: var(--normal-font);
+}
+
+.page:hover,
+.submit-btn:hover {
+  transform: scale(1.1);
+}
+
+.submit-btn:active,
+.page:active {
+  transform: scale(0.9);
 }
