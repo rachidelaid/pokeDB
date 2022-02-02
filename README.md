@@ -1,45 +1,28 @@
-# Webpack Boilerplate
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-A basic webpack boilerplate, ready to be used immediately, no configuration needed. It doesn't tell you, which framework or library you should be using, it contains only a handful of modules:
+# PokeDB Website
 
-- Webpack
-- html-webpack-plugin
-- css-loader
-- style-loader
-- webpack-dev-server
+> This project has a list of pokemons you can like and comment.
 
-Everything else is up to you.
+PokeDB includes the PokeAPI and Involvement API. You can like pokemons and comment on their page, check their type and base stats.
 
-## Usage
+## Live Server
 
-start by cloning this repository by running:
+In the following link, you can view the [PokeDB website](https://pokedb.netlify.app/).
 
-```
-git clone https://github.com/rachidelaid/webpack-boilerplate.git
-```
+## Built With
 
-cd to the folder
+- HTML
+- CSS
+- JAVASCRIPT
+- Node.js/NPM
 
-```
-cd webpack-boilerplate
-```
-
-run this command to install all the packages needed
+## Getting Started
 
 ```
 npm install
-```
-
-to run a live server on port 8080 run this command
-
-```
-npm run start
-```
-
-to build your project run:
-
-```
 npm run build
+npm start
 ```
 
 ## Authors
@@ -48,8 +31,28 @@ npm run build
 
 - GitHub: [@rachidelaid](https://github.com/rachidelaid)
 - Twitter: [@rachidelaid1](https://twitter.com/rachidelaid1)
-- LinkedIn: [rachid elaid](https://www.linkedin.com/in/rachid-elaid-106336203/)
+- LinkedIn: [Rachid El aid](https://www.linkedin.com/in/rachid-elaid-106336203/)
+
+👤 **Pedro Guerreiro**
+
+- GitHub: [@guerreiropedr0](https://github.com/guerreiropedr0)
+- Twitter: [@guerreiropedr0](https://twitter.com/guerreiropedr0)
+- LinkedIn: [Pedro Guerreiro](https://www.linkedin.com/in/guerreiropedr0/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Acknowledgments
+
+In this project we used the [Poke API](https://www.notion.so/Leaderboard-API-service-24c0c3c116974ac49488d4eb0267ade3) and [Involvement API](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270), please check it out! 😊
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
