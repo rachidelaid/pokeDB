@@ -268,7 +268,8 @@ main {
 
 .actions {
   gap: 0.2rem;
-  flex-direction: column;
+  height: 100%;
+  align-items: flex-end;
 }
 
 .like-icon {
