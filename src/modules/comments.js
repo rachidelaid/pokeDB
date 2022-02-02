@@ -26,7 +26,7 @@ const populateComments = (data) => {
   }
 };
 
-const counter = (data) => {
+export const counter = (data) => {
   if (data.length) {
     document.getElementById('comment-title').innerHTML += ` (${data.length})`;
   }
