@@ -267,6 +267,10 @@ main {
   flex-direction: column;
 }
 
+.filled-heart {
+  color: var(--red-color);
+}
+
 .pagination {
   gap: 0.5rem;
 }
