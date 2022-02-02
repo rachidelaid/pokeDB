@@ -1,4 +1,4 @@
-import capitalize from './helpers.js';
+import capitalize, { newDate } from './helpers.js';
 import addComment from './comments.js';
 
 export default async function populate(data, element) {
@@ -96,7 +96,7 @@ export default async function populate(data, element) {
       </div>
     </div>
     <section class="comments">
-    <h3 id="comment-title">Comments (x)</h3>
+    <h3 id="comment-title">Comments</h3>
       <div class="comment-list">
       </div>
       </section>
@@ -127,9 +127,17 @@ export default async function populate(data, element) {
       form.elements.fullname.value,
       form.elements.comment.value,
     );
+    if (
+      document.querySelector('.comment-list p').textContent
+      === 'No comments found'
+    ) {
+      document.querySelector('.comment-list').innerHTML = '';
+    }
     document.querySelector(
-      '.comments',
-    ).innerHTML += `<p>${form.elements.fullname.value}: ${form.elements.comment.value}</p>`;
+      '.comment-list',
+    ).innerHTML += `<p><small>${newDate()}</small> | <span>${form.elements.fullname.value.trim()}:</span> ${
+      form.elements.comment.value
+    }</p>`;
     form.reset();
     form.focus();
   });

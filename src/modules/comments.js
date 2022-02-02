@@ -26,10 +26,17 @@ const populateComments = (data) => {
   }
 };
 
+const counter = (data) => {
+  if (data.length) {
+    document.getElementById('comment-title').innerHTML += ` (${data.length})`;
+  }
+};
+
 export const getComments = async (pokemon) => {
   const request = await fetch(
     `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/d0HqiZcQvtTYVZAFmqCY/comments?item_id=${pokemon}`,
   );
   const dataText = await request.json();
   populateComments(dataText);
+  counter(dataText);
 };
