@@ -15,10 +15,11 @@ const generateCard = (data) => {
     <h3>${capitalize(data.name)}</h3>
     <div class="chips-wrap flex">
       ${data.types
-    .map(
-      (t) => `<span class="chips chip-${t.type.name}">${t.type.name}</span>`,
-    )
-    .join('')}
+        .map(
+          (t) =>
+            `<span class="chips chip-${t.type.name}">${t.type.name}</span>`,
+        )
+        .join('')}
     </div>
   </div>
   <div class="actions flex">
