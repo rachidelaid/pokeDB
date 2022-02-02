@@ -394,3 +394,26 @@ form {
 .page:active {
   transform: scale(0.9);
 }
+
+.comment-list {
+  max-height: 200px;
+  padding: 1rem;
+  background-color: var(--bg-dark);
+  border-radius: 0.7rem;
+  margin-top: 1rem;
+  overflow: auto;
+}
+
+.comment-list p {
+  padding: 0.5rem;
+}
+
+.comment-list small {
+  opacity: 0.6;
+}
+
+.comment-list span {
+  color: var(--accent-color);
+  text-decoration: underline;
+  margin-right: 0.2rem;
+}
