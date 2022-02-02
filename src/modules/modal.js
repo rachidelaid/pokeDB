@@ -95,7 +95,11 @@ export default async function populate(data, element) {
         </ul>
       </div>
     </div>
-    <section class="comments"></section>
+    <section class="comments">
+    <h3 id="comment-title">Comments (x)</h3>
+      <div class="comment-list">
+      </div>
+      </section>
     <form class="flex flex-aic">
       <input id="fullname" type="text" placeholder="Your name" required />
       <textarea

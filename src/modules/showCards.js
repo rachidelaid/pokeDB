@@ -2,6 +2,7 @@ import { getPoke } from './poke.js';
 import populate from './modal.js';
 import capitalize from './helpers.js';
 import { addLike } from './likes.js';
+import { getComments } from './comments.js';
 
 const generateCard = (data) => {
   const card = document.createElement('div');
@@ -47,6 +48,7 @@ const generateCard = (data) => {
     }
 
     populate(data, document.body);
+    getComments(data.id);
   });
   return card;
 };
