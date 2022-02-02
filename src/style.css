@@ -77,6 +77,10 @@ body {
   color: var(--text-color);
 }
 
+.noScroll {
+  overflow: hidden;
+}
+
 .flex {
   display: flex;
 }
@@ -267,8 +271,23 @@ main {
   flex-direction: column;
 }
 
+.like-icon {
+  position: relative;
+  padding: 0 0.2rem 0.2rem 0;
+}
+
 .filled-heart {
   color: var(--red-color);
+}
+
+.like-count {
+  background-color: red;
+  font-size: 0.7rem;
+  padding: 0.1rem 0.2rem;
+  border-radius: 0.7rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .pagination {

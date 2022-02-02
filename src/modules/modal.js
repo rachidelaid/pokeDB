@@ -116,6 +116,7 @@ export default async function populate(data, element) {
 
   document.querySelector('.close-btn').addEventListener('click', () => {
     wrapper.remove();
+    document.body.classList.toggle('noScroll');
   });
 
   const form = document.querySelector('form');
