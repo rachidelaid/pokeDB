@@ -1,4 +1,5 @@
 import capitalize from './helpers.js';
+import addComment from './comments.js';
 
 export default async function populate(data, element) {
   const wrapper = document.createElement('div');
@@ -94,6 +95,7 @@ export default async function populate(data, element) {
         </ul>
       </div>
     </div>
+    <section class="comments"></section>
     <form class="flex flex-aic">
       <input id="fullname" type="text" placeholder="Your name" required />
       <textarea
@@ -110,5 +112,20 @@ export default async function populate(data, element) {
 
   document.querySelector('.close-btn').addEventListener('click', () => {
     wrapper.remove();
+  });
+
+  const form = document.querySelector('form');
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    addComment(
+      data.id,
+      form.elements.fullname.value,
+      form.elements.comment.value,
+    );
+    document.querySelector(
+      '.comments',
+    ).innerHTML += `<p>${form.elements.fullname.value}: ${form.elements.comment.value}</p>`;
+    form.reset();
+    form.focus();
   });
 }
