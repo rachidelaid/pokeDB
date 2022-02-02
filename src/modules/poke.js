@@ -1,6 +1,6 @@
-const getPokeList = async (offset) => {
+const getPokeList = async (offset, limit = 20) => {
   const resp = await fetch(
-    `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=20`,
+    `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`,
   );
   const { results } = await resp.json();
   return results;
@@ -12,4 +12,9 @@ const getPoke = async (name) => {
   return data;
 };
 
-export { getPokeList, getPoke };
+const getPokeCount = async () => {
+  const list = await getPokeList(0, 2000);
+  return list.length;
+};
+
+export { getPokeList, getPoke, getPokeCount };
