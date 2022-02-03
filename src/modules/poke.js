@@ -6,6 +6,12 @@ const getPokeList = async (offset, limit = 20) => {
   return results;
 };
 
+const getPokeByHabitats = async (id) => {
+  const resp = await fetch(`https://pokeapi.co/api/v2/pokemon-habitat/${id}`);
+  const { pokemon_species: results } = await resp.json();
+  return results;
+};
+
 const getPoke = async (name) => {
   const resp = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
   const data = await resp.json();
@@ -17,4 +23,6 @@ const getPokeCount = async () => {
   return list.length;
 };
 
-export { getPokeList, getPoke, getPokeCount };
+export {
+  getPokeList, getPoke, getPokeCount, getPokeByHabitats,
+};
