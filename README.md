@@ -6,9 +6,16 @@
 
 PokeDB includes the PokeAPI and Involvement API. You can like pokemons and comment on their page, check their type and base stats.
 
-## Live Server
+![screenshot](./src/screenshot.png)
+
+## Live Link
 
 In the following link, you can view the [PokeDB website](https://pokedb.netlify.app/).
+
+## Explanation Video
+
+this a short explaining what we have done on this project.
+[video link](https://drive.google.com/file/d/19d4CjPtOaksgTDJAMBN4KJMZIVJzEot-/view?usp=sharing)
 
 ## Built With
 
@@ -19,11 +26,29 @@ In the following link, you can view the [PokeDB website](https://pokedb.netlify.
 
 ## Getting Started
 
-```
-npm install
-npm run build
-npm start
-```
+start by cloning the repository.
+
+`git clone https://github.com/rachidelaid/pokeDB.git`
+
+cd to the folder.
+
+`cd pokeDB`
+
+install all the dependencies.
+
+`npm install`
+
+run the live server
+
+`npm run start`
+
+go to [http://localhost:8080](http://localhost:8080)
+
+build the distribution folder before hosting the app
+
+`npm run build`
+
+after the build you can host the `dist` folder.
 
 ## Authors
 

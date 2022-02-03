@@ -1,7 +1,7 @@
 import capitalize, { newDate } from './helpers.js';
 import addComment from './comments.js';
 
-export default async function populate(data, element) {
+const populate = async (data, element) => {
   const wrapper = document.createElement('div');
   wrapper.className = 'wrapper';
   wrapper.innerHTML = `<div class="modal">
@@ -17,12 +17,12 @@ export default async function populate(data, element) {
         <h2 class="pokemon-name">${capitalize(data.name)}</h2>
         <div class="flex chips-wrap">
           ${data.types
-    .map(
-      (t) => `<span class="chips chip-${t.type.name}"
+            .map(
+              (t) => `<span class="chips chip-${t.type.name}"
             >${t.type.name}</span
           >`,
-    )
-    .join('')}
+            )
+            .join('')}
         </div>
       </div>
       <div class="stats-wrap">
@@ -128,8 +128,8 @@ export default async function populate(data, element) {
       form.elements.comment.value,
     );
     if (
-      document.querySelector('.comment-list p').textContent
-      === 'No comments found'
+      document.querySelector('.comment-list p').textContent ===
+      'No comments found'
     ) {
       document.querySelector('.comment-list').innerHTML = '';
     }
@@ -141,4 +141,6 @@ export default async function populate(data, element) {
     form.reset();
     form.focus();
   });
-}
+};
+
+export default populate;
