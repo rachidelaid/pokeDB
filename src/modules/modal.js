@@ -17,12 +17,12 @@ const populate = async (data, element) => {
         <h2 class="pokemon-name">${capitalize(data.name)}</h2>
         <div class="flex chips-wrap">
           ${data.types
-            .map(
-              (t) => `<span class="chips chip-${t.type.name}"
+    .map(
+      (t) => `<span class="chips chip-${t.type.name}"
             >${t.type.name}</span
           >`,
-            )
-            .join('')}
+    )
+    .join('')}
         </div>
       </div>
       <div class="stats-wrap">
@@ -128,8 +128,8 @@ const populate = async (data, element) => {
       form.elements.comment.value,
     );
     if (
-      document.querySelector('.comment-list p').textContent ===
-      'No comments found'
+      document.querySelector('.comment-list p').textContent
+      === 'No comments found'
     ) {
       document.querySelector('.comment-list').innerHTML = '';
     }
