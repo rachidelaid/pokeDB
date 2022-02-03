@@ -1,6 +1,10 @@
 import './style.css';
 
-import { getPokeCount, getPokeList } from './modules/poke.js';
+import {
+  getPokeCount,
+  getPokeList,
+  getPokeByHabitats,
+} from './modules/poke.js';
 import { showCards } from './modules/showCards.js';
 import setupPagination from './modules/pagination.js';
 
@@ -22,6 +26,19 @@ const startup = async () => {
   const list = await getPokeList(20 * (pageNum - 1));
   showCards(list);
 };
+
+document.querySelector('#Habitat').addEventListener('change', async (e) => {
+  if (!+e.target.value) {
+    startup();
+  } else {
+    document.querySelector('.list').classList.add('hide');
+    document.querySelector('.pagination').classList.add('hide');
+    document.querySelector('.loading').classList.remove('hide');
+
+    const list = await getPokeByHabitats(e.target.value);
+    showCards(list, false);
+  }
+});
 
 startup();
 setupPagination();

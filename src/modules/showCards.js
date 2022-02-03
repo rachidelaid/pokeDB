@@ -68,7 +68,7 @@ const generateCard = (data) => {
   return card;
 };
 
-const showCards = async (list) => {
+const showCards = async (list, pag = true) => {
   const parent = document.querySelector('.list');
   const likesList = await getLikes();
   parent.innerHTML = '';
@@ -81,8 +81,10 @@ const showCards = async (list) => {
   });
 
   setTimeout(() => {
+    if (pag) {
+      document.querySelector('.pagination').classList.remove('hide');
+    }
     parent.classList.remove('hide');
-    document.querySelector('.pagination').classList.remove('hide');
     document.querySelector('.loading').classList.add('hide');
   }, 1500);
 };
