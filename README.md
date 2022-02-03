@@ -6,7 +6,7 @@
 
 PokeDB includes the PokeAPI and Involvement API. You can like pokemons and comment on their page, check their type and base stats.
 
-![screenshot](./src/screenshot.png)
+![screenshot](./screenshot.png)
 
 ## Live Link
 
