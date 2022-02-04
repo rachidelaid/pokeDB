@@ -3,9 +3,95 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Webpack Exercise</title>
+    <title>PokeDB</title>
   </head>
   <body>
-    <h1>Hello webpack!</h1>
+    <header class="logo flex flex-jcb flex-aic">
+      <a href="/" class="logo flex flex-aic">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg"
+          alt="pokeDB logo"
+        />
+        <p>Poke<span>DB</span></p>
+      </a>
+      <nav>
+        <ul class="nav-links flex flex-aic">
+          <li><a href="#">Pokemon List</a></li>
+          <li>
+            <select id="Habitat">
+              <option value="0" selected disabled>Pokemon Habitat</option>
+              <option value="0">All</option>
+              <option value="1">Cave</option>
+              <option value="2">Forest</option>
+              <option value="3">Grassland</option>
+              <option value="4">Mountain</option>
+              <option value="5">Rare</option>
+              <option value="6">Rough Terrain</option>
+              <option value="7">Sea</option>
+              <option value="8">Urban</option>
+              <option value="9">Waters Edge</option>
+            </select>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro">
+        <h1>PokeDB: Pokémon Database</h1>
+        <p>
+          List of <span class="tag">0</span> Pokémon's and their details
+          <br />
+          Filtered by habitats
+        </p>
+      </section>
+
+      <section class="loading flex flex-aic flex-jcc">
+        <img
+          class="loading-ball"
+          src="https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg"
+          alt="pokeDB logo"
+        />
+      </section>
+
+      <section class="list hide"></section>
+
+      <section class="pagination flex flex-aic flex-jcc hide">
+        <div class="page prev flex flex-jcc flex-aic">
+          <svg viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"
+            />
+          </svg>
+        </div>
+        <div class="page next flex flex-jcc flex-aic">
+          <svg viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"
+            />
+          </svg>
+        </div>
+      </section>
+    </main>
+
+    <footer class="flex flex-jcb flex-aic">
+      <a href="/" class="logo flex flex-aic">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg"
+          alt="pokeDB logo"
+        />
+        <p>Poke<span>DB</span></p>
+      </a>
+      <p>
+        Created by
+        <a href="https://github.com/rachidelaid" class="tag">@rachidelaid</a>
+        and
+        <a href="https://github.com/guerreiropedr0" class="tag"
+          >@guerreiropedr0</a
+        >
+      </p>
+    </footer>
   </body>
 </html>
